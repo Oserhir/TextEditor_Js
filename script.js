@@ -1,6 +1,10 @@
 let text_input = document.getElementById("text-input");
 let text_output = document.getElementById("text-output");
 
+window.onload = function () {
+  text_input.value = "";
+};
+
 // Update the text in the "Formatted Text" section
 text_input.addEventListener("input", () => {
   text_output.innerText = text_input.value;
@@ -23,7 +27,7 @@ italic.addEventListener("click", () => {
 });
 
 let underline = document.getElementById("underline");
-
+// Add a .underline classes to 'Formatted Text'
 underline.addEventListener("click", () => {
   underline.classList.toggle("active");
   if (text_output.classList.contains("underline")) {
@@ -34,7 +38,7 @@ underline.addEventListener("click", () => {
 });
 
 let btn = document.getElementsByClassName("align");
-
+// Toggle the style textAlign attribute
 let alignText = (elem, alignType) => {
   text_output.style.textAlign = alignType;
 
