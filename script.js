@@ -22,4 +22,13 @@ italic.addEventListener("click", () => {
   italic.classList.toggle("active");
 });
 
+let underline = document.getElementById("underline");
 
+underline.addEventListener("click", () => {
+  underline.classList.toggle("active");
+  if (text_output.classList.contains("underline")) {
+    text_output.classList.remove("underline");
+  } else {
+    text_output.classList.add("underline");
+  }
+});
