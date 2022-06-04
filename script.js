@@ -32,3 +32,15 @@ underline.addEventListener("click", () => {
     text_output.classList.add("underline");
   }
 });
+
+let btn = document.getElementsByClassName("align");
+
+let alignText = (elem, alignType) => {
+  text_output.style.textAlign = alignType;
+
+  for (let button of btn) {
+    button.classList.remove("active");
+  }
+
+  elem.classList.add("active");
+};
